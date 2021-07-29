@@ -10,6 +10,6 @@ docker build -f Dockerfile --no-cache -t docker_ktw .
 	
 docker run -ti docker_ktw /bin/bash
 
-### Below command activate a python virtual environment and run Flask app with local host's port 5000 exposed to Docker's port 7000
+### Below command activate a python virtual environment and run Flask app with Docker's port exposed to 7000
 
 docker run -d -p 7000:5000 -ti docker_ktw /bin/bash -c "cd src/ && source activate mlenv && python app.py"
