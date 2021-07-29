@@ -1,5 +1,8 @@
 # Steps to dockeraize a Flask app
 
+### Read the Dockerfile for details
+
+
 docker build -f Dockerfile -t docker_ktw .
 
 ### To build without cache (takes longer time)
@@ -17,17 +20,15 @@ docker run -d -p 7000:5000 -ti docker_ktw /bin/bash -c "cd src/ && source activa
 
 
 
-### Steps to publish in GitHub
+## Steps used to publish in GitHub
 
+### Create a repo in GitHub first AND clone to local machine
 
-## Create a repo in GitHub first AND clone to local machine
-
-## Pre-requisite 
+### Pre-requisite for ssh key based authentication
 	- ssh-keygen -t rsa 
 	- cat /c/Users/kwadud/.ssh/id_rsa.pub 
 	- Copy and paste the key at SSH key part in GitHub setting
 
-### 
 git clone git@github.com:kazitoufiq/docker-flask-app.git
 
 git status
